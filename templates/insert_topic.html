@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Topic insertion Form</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="topic">Topic_name</label>
+            <input type="text" name="to" id="topic">
+            <br><br>
+            <input type="submit" value="Insert topic">
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Webpage insertion Form</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="topics">Topics</label>
+            <select name="topic" id="topics">
+                {% for to in topics %}
+                 
+                 <option value="{{to}}">{{to.topic_name}}</option>
+                {% endfor %}
+            </select><br><br>
+
+           <label for="name">Name</label>
+           <input type="text" name="na" id="name"><br><br>
+           <label for="url">URL</label>
+           <input type="url" name="ur" id="url"><br><br>
+           <label for="email">Email</label>
+           <input type="email" name="em" id="email"><br><br>
+           <input type="submit" value="Insert webpage">
+        </form>
+    </center>
+</body>
+</html>
