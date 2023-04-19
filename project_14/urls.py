@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('insert_topic/',insert_topic,name='insert_topic'),
     path('insert_webpage/',insert_webpage,name='insert_webpage'),
+    path('retrieve_data/',retrieve_data,name='retrieve_data'),
+    path('checkbox/',checkbox,name='checkbox'),
 ]

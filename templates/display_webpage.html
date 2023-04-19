@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Displaying Webpages</h1>
+
+        <table border="4px">
+           <tr>
+            <th>Topic_name</th>
+            <th>Name</th>
+            <th>url</th>
+            <th>email</th>
+           </tr>
+           {% for wo in webpages %}
+
+           <tr>
+            <td>{{wo.topic_name}}</td>
+            <td>{{wo.name}}</td>
+            <td>{{wo.url}}</td>
+            <td>{{wo.email}}</td>
+           </tr>
+           {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
